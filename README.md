@@ -1,4 +1,4 @@
-for compiling p4 with intended output
+for compiling tofino p4 with intended output
 ```
 venv) motherfunder@motherfunder-VivoBook-ASUSLaptop-X515DA:~/IamWorking/tofinoCase/simpleforwarding$ cd ~/IamWorking/tofinoCase/simpleforwarding/
 
