@@ -1,0 +1,16 @@
+digraph egress {
+cond_4 [ shape=record, style="filled", fillcolor=cornsilk, label="hdr.ipv4.$valid == 1\l\l
+ "];
+next_hop_0 [ shape=record, style="filled", fillcolor=cornsilk, label="next_hop_0\l\l
+M:\l
+ eg_intr_md.egress_port\l
+\lW:\l
+ hdr.ethernet.srcAddr\l
+ hdr.ethernet.dstAddr\l
+ "];
+    PARSER -> cond_4
+    cond_4 -> next_hop_0
+    PARSER -> cond_4
+    cond_4 -> DEPARSER
+    next_hop_0 -> DEPARSER
+}

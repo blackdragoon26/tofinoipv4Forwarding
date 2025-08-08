@@ -1,0 +1,60 @@
+{
+  "schema_version": "3.0.1",
+  "target": "tofino",
+  "build_date": "Fri Aug  8 12:11:54 2025",
+  "compiler_version": "9.13.4 (17ade03c1)",
+  "compilation_succeeded": true,
+  "compilation_time": "2.2098283767700195",
+  "run_id": "3e26721e54ec4baf",
+  "target_data": {
+    "architecture": "tna",
+    "architectureConfig": {
+      "name": "64q",
+      "pipes": [
+        {
+          "pipe": 0,
+          "ingress": {
+            "pipeName": "Ingress",
+            "nextControl": [
+              {
+                "pipe": 0,
+                "pipeName": "Egress"
+              }
+            ]
+          },
+          "egress": {
+            "pipeName": "Egress",
+            "nextControl": []
+          }
+        }
+      ]
+    },
+    "conf_file": "simple_ipv4.conf"
+  },
+  "programs": [
+    {
+      "program_name": "simple_ipv4.p4",
+      "p4_version": "p4-16",
+      "source_files": {
+        "src_root": "/home/motherfunder/IamWorking/tofinoCase/simpleforwarding",
+        "includes": [],
+        "defines": []
+      },
+      "pipes": [
+        {
+          "pipe_id": 0,
+          "pipe_name": "pipe",
+          "files": {
+            "context": {
+              "path": "pipe/context.json"
+            },
+            "resources": [],
+            "graphs": [],
+            "logs": []
+          }
+        }
+      ]
+    }
+  ],
+  "compile_command": "/home/motherfunder/open-p4studio/build/pkgsrc/p4-compilers/p4c/bf-p4c --arch tna --target tofino --output simple_ipv4.json simple_ipv4.p4"
+}
