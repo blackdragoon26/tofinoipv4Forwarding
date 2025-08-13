@@ -1,0 +1,58 @@
+Parser Characterization Report:
+Number of states on ingress: 2
+
+Number of matches on ingress: 3
+
+Longest path (2 states) on ingress:
+    $init_match
+    $entry_point.start
+
+Shortest path (2 states) on ingress:
+    $init_match
+    $entry_point.start
+
+Timing is met for min-sized packet (73 B) running at 100 Gbps
+
+Extractor usage:
++--------------------+--------+-------+--------+--------+------------------+-------+
+|State               |Match   |8-bit  |16-bit  |32-bit  |Total Extractors  |Other  |
++--------------------+--------+-------+--------+--------+------------------+-------+
+|$init_match         |*       |1      |3       |2       |6                 |       |
+|$entry_point.start  |0x0800  |3      |3       |3       |9                 |       |
+|-                   |0x****  |0      |0       |0       |0                 |       |
++--------------------+--------+-------+--------+--------+------------------+-------+
+Number of states on egress: 6
+
+Number of matches on egress: 10
+
+Longest path (6 states) on egress:
+    $entry_point.start
+    $entry_point.start.$oob_stall_0
+    $entry_point.start.$split_0
+    min_parse_depth_accept_initial
+    min_parse_depth_accept_loop.$split_0
+    min_parse_depth_accept_loop.$it1.$split_0
+
+Shortest path (4 states) on egress:
+    $entry_point.start
+    $entry_point.start.$oob_stall_0
+    $entry_point.start.$split_0
+    min_parse_depth_accept_initial
+
+Timing is met for min-sized packet (73 B) running at 100 Gbps
+
+Extractor usage:
++-------------------------------------------+--------+-------+--------+--------+------------------+-------+
+|State                                      |Match   |8-bit  |16-bit  |32-bit  |Total Extractors  |Other  |
++-------------------------------------------+--------+-------+--------+--------+------------------+-------+
+|$entry_point.start                         |*       |1      |2       |0       |3                 |       |
+|$entry_point.start.$oob_stall_0            |*       |0      |2       |2       |4                 |       |
+|$entry_point.start.$split_0                |0x0800  |1      |2       |4       |7                 |       |
+|-                                          |0x****  |0      |0       |0       |0                 |       |
+|min_parse_depth_accept_initial             |0x0     |2      |4       |0       |6                 |       |
+|-                                          |0b**    |0      |0       |0       |0                 |       |
+|min_parse_depth_accept_loop.$split_0       |0x0     |2      |2       |2       |6                 |       |
+|-                                          |0b**    |0      |1       |0       |1                 |       |
+|min_parse_depth_accept_loop.$it1.$split_0  |0x0     |2      |1       |2       |5                 |       |
+|-                                          |0b**    |0      |0       |0       |0                 |       |
++-------------------------------------------+--------+-------+--------+--------+------------------+-------+

@@ -1,0 +1,16 @@
+digraph IngressDeparser {
+subgraph cluster {
+graph [
+fontsize="22pt", label=IngressDeparser, style=bold];
+0[label=__START__, margin="", shape=rectangle, style=solid];
+1[label=__EXIT__, margin="", shape=rectangle, style=solid];
+2[label="ig_dprsr_md.mirror_type == 0;", margin="", shape=rectangle, style=rounded];
+3[label="mirror.emit(0);", margin="", shape=rectangle, style=solid];
+4[label="pkt.emit<ethernet_t>(hdr....\npkt.emit<ipv4_t>(hdr.ipv4...", margin="", shape=rectangle, style=solid];
+0 -> 2[label=""];
+2 -> 3[label=TRUE];
+2 -> 4[label=FALSE];
+3 -> 4[label=""];
+4 -> 1[label=""];
+}
+}

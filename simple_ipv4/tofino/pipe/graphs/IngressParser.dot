@@ -1,0 +1,14 @@
+digraph IngressParser {
+subgraph clusterIngressParser {
+graph [
+fontsize="22pt", label=IngressParser, style=bold];
+0[label="start
+{ hdr.ethernet.etherType }", margin="", shape=rectangle, style=solid];
+1[label=parse_ipv4, margin="", shape=rectangle, style=solid];
+2[label=accept, margin="", shape=rectangle, style=solid];
+3[label=reject, margin="", shape=rectangle, style=solid];
+0 -> 1[label="16w0x800"];
+0 -> 2[label=default];
+1 -> 2[label=always];
+}
+}

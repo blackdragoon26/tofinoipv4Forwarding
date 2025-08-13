@@ -1,0 +1,16 @@
+:08-13 12:48:14.552811:    Setting logging fn
+:08-13 12:48:14.552969:    Registering handler for tx
+:08-13 12:48:14.573108:     Updating model log flags: clearing 0xffffffff ffffffff, setting 0x00000000 0000000f
+:08-13 12:48:14.583842:    :-:-:<0,0,0>:Updating p4 log flags: clearing 0xffffffff ffffffff, setting 0x00000000 0000007f
+:08-13 12:48:14.592591:    :-:-:<0,0,0>:Updating tofino log flags: clearing 0xffffffff ffffffff, setting 0x00000000 0000007f
+:08-13 12:48:14.603347:    :-:-:<0,0,0>:Updating packet log flags: clearing 0xffffffff ffffffff, setting 0x00000000 0000007f
+:08-13 12:48:15.077200:    :-:-:<0,0,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:08-13 12:48:15.077340:    :-:-:<0,0,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:08-13 12:48:15.079724:    :-:-:<0,1,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:08-13 12:48:15.080044:    :-:-:<0,1,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:08-13 12:48:15.082573:    :-:-:<0,2,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:08-13 12:48:15.082834:    :-:-:<0,2,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:08-13 12:48:15.084509:    :-:-:<0,3,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:08-13 12:48:15.084787:    :-:-:<0,3,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:08-13 12:49:23.555939:    :-:-:<0,-,0>:Begin packet processing
+:08-13 12:49:23.556078:    :-:-:<0,-,0>:Chip=0 Thread=0 Pipe=*: PktsIn=0 PktsOut=0 PktsTOT=0  Waits=7

@@ -1,0 +1,11 @@
+/home/motherfunder/open-p4studio/build/p4-build/my_program/CMakeFiles/bf-p4c.dir
+/home/motherfunder/open-p4studio/build/p4-build/my_program/CMakeFiles/driver.dir
+/home/motherfunder/open-p4studio/build/p4-build/my_program/CMakeFiles/simple_ipv4.dir
+/home/motherfunder/open-p4studio/build/p4-build/my_program/CMakeFiles/simple_ipv4-tofino.dir
+/home/motherfunder/open-p4studio/build/p4-build/my_program/CMakeFiles/uninstall.dir
+/home/motherfunder/open-p4studio/build/p4-build/my_program/CMakeFiles/edit_cache.dir
+/home/motherfunder/open-p4studio/build/p4-build/my_program/CMakeFiles/rebuild_cache.dir
+/home/motherfunder/open-p4studio/build/p4-build/my_program/CMakeFiles/list_install_components.dir
+/home/motherfunder/open-p4studio/build/p4-build/my_program/CMakeFiles/install.dir
+/home/motherfunder/open-p4studio/build/p4-build/my_program/CMakeFiles/install/local.dir
+/home/motherfunder/open-p4studio/build/p4-build/my_program/CMakeFiles/install/strip.dir

@@ -1,0 +1,116 @@
+{
+  "tables" : [
+    {
+      "name" : "Ingress.ipv4_lpm",
+      "actions" : [
+        {
+          "name" : "Ingress.ipv4_forward",
+          "primitives" : [
+            {
+              "name" : "ModifyFieldPrimitive",
+              "operation" : "set",
+              "dst" : {
+                "type" : "phv",
+                "name" : "ig_intr_md_for_tm.ucast_egress_port"
+              },
+              "dst_mask" : {
+                "type" : "immediate",
+                "name" : "511"
+              },
+              "src1" : {
+                "type" : "action_param",
+                "name" : "port"
+              }
+            },
+            {
+              "name" : "DirectAluPrimitive",
+              "operation" : "add",
+              "dst" : {
+                "type" : "phv",
+                "name" : "hdr.ipv4.ttl"
+              },
+              "dst_mask" : {
+                "type" : "immediate",
+                "name" : "255"
+              },
+              "src1" : {
+                "type" : "phv",
+                "name" : "hdr.ipv4.ttl"
+              },
+              "src2" : {
+                "type" : "immediate",
+                "name" : "8w255"
+              }
+            }
+          ]
+        },
+        {
+          "name" : "Ingress.drop",
+          "primitives" : [
+            {
+              "name" : "DropPrimitive",
+              "dst" : {
+                "type" : "phv",
+                "name" : "ig_intr_md_for_dprsr.drop_ctl"
+              },
+              "src1" : {
+                "type" : "immediate",
+                "name" : "1"
+              }
+            }
+          ]
+        },
+        {
+          "name" : "NoAction",
+          "primitives" : []
+        }
+      ]
+    },
+    {
+      "name" : "Egress.next_hop",
+      "actions" : [
+        {
+          "name" : "Egress.rewrite_mac",
+          "primitives" : [
+            {
+              "name" : "ModifyFieldPrimitive",
+              "operation" : "set",
+              "dst" : {
+                "type" : "phv",
+                "name" : "hdr.ethernet.srcAddr"
+              },
+              "dst_mask" : {
+                "type" : "immediate",
+                "name" : "281474976710655"
+              },
+              "src1" : {
+                "type" : "action_param",
+                "name" : "src_mac"
+              }
+            },
+            {
+              "name" : "ModifyFieldPrimitive",
+              "operation" : "set",
+              "dst" : {
+                "type" : "phv",
+                "name" : "hdr.ethernet.dstAddr"
+              },
+              "dst_mask" : {
+                "type" : "immediate",
+                "name" : "281474976710655"
+              },
+              "src1" : {
+                "type" : "action_param",
+                "name" : "dst_mac"
+              }
+            }
+          ]
+        },
+        {
+          "name" : "NoAction",
+          "primitives" : []
+        }
+      ]
+    }
+  ]
+}

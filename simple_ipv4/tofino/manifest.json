@@ -1,0 +1,176 @@
+{
+  "schema_version": "3.0.1",
+  "target": "tofino",
+  "build_date": "Wed Aug 13 12:43:55 2025",
+  "compiler_version": "9.13.4 (17ade03c1)",
+  "compilation_succeeded": true,
+  "compilation_time": "2.850508213043213",
+  "run_id": "a20a2ade19ce4d98",
+  "target_data": {
+    "architecture": "tna",
+    "architectureConfig": {
+      "name": "64q",
+      "pipes": [
+        {
+          "pipe": 0,
+          "ingress": {
+            "pipeName": "Ingress",
+            "nextControl": [
+              {
+                "pipe": 0,
+                "pipeName": "Egress"
+              }
+            ]
+          },
+          "egress": {
+            "pipeName": "Egress",
+            "nextControl": []
+          }
+        }
+      ]
+    },
+    "conf_file": "simple_ipv4.conf"
+  },
+  "programs": [
+    {
+      "program_name": "simple_ipv4.p4",
+      "p4_version": "p4-16",
+      "event_log_file": "events.json",
+      "frontend_ir_log_file": "frontend-ir.json",
+      "source_files": {
+        "src_root": "/home/motherfunder/IamWorking/tofinoCase/simpleforwarding",
+        "src_map": "source.json",
+        "includes": [],
+        "defines": []
+      },
+      "pipes": [
+        {
+          "pipe_id": 0,
+          "pipe_name": "pipe",
+          "files": {
+            "context": {
+              "path": "pipe/context.json"
+            },
+            "resources": [
+              {
+                "path": "pipe/logs/resources.json",
+                "type": "resources"
+              }
+            ],
+            "graphs": [
+              {
+                "path": "pipe/graphs/dep.json",
+                "gress": "ingress",
+                "graph_type": "table",
+                "graph_format": ".json"
+              },
+              {
+                "path": "pipe/graphs/power_graph.dot",
+                "gress": "ingress",
+                "graph_type": "table",
+                "graph_format": ".dot"
+              },
+              {
+                "path": "pipe/graphs/placement_graph.dot",
+                "gress": "ingress",
+                "graph_type": "table",
+                "graph_format": ".dot"
+              },
+              {
+                "path": "pipe/graphs/program_graph.dot",
+                "gress": "ingress",
+                "graph_type": "table",
+                "graph_format": ".dot"
+              },
+              {
+                "path": "pipe/graphs/table_dep_graph_placement_0.dot",
+                "gress": "ingress",
+                "graph_type": "table",
+                "graph_format": ".dot"
+              },
+              {
+                "path": "pipe/graphs/Egress.dot",
+                "gress": "egress",
+                "graph_type": "control",
+                "graph_format": ".dot"
+              },
+              {
+                "path": "pipe/graphs/EgressParser.dot",
+                "gress": "egress",
+                "graph_type": "parser",
+                "graph_format": ".dot"
+              },
+              {
+                "path": "pipe/graphs/Ingress.dot",
+                "gress": "ingress",
+                "graph_type": "control",
+                "graph_format": ".dot"
+              },
+              {
+                "path": "pipe/graphs/IngressParser.dot",
+                "gress": "ingress",
+                "graph_type": "parser",
+                "graph_format": ".dot"
+              }
+            ],
+            "logs": [
+              {
+                "path": "pipe/logs/flexible_packing.log",
+                "log_type": "parser"
+              },
+              {
+                "path": "pipe/logs/parser.characterize.log",
+                "log_type": "parser"
+              },
+              {
+                "path": "pipe/logs/parser.log",
+                "log_type": "parser"
+              },
+              {
+                "path": "pipe/logs/phv.json",
+                "log_type": "phv"
+              },
+              {
+                "path": "pipe/logs/phv_allocation_0.log",
+                "log_type": "phv"
+              },
+              {
+                "path": "pipe/logs/phv_allocation_history_0.log",
+                "log_type": "phv"
+              },
+              {
+                "path": "pipe/logs/phv_allocation_summary_0.log",
+                "log_type": "phv"
+              },
+              {
+                "path": "pipe/logs/power.json",
+                "log_type": "power"
+              },
+              {
+                "path": "pipe/logs/pragmas.log",
+                "log_type": "phv"
+              },
+              {
+                "path": "pipe/logs/table_dependency_graph.log",
+                "log_type": "mau"
+              },
+              {
+                "path": "pipe/logs/table_dependency_summary.log",
+                "log_type": "mau"
+              },
+              {
+                "path": "pipe/logs/table_placement_1.log",
+                "log_type": "mau"
+              },
+              {
+                "path": "pipe/logs/table_summary.log",
+                "log_type": "mau"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "compile_command": "/home/motherfunder/open-p4studio/build/pkgsrc/p4-compilers/p4c/bf-p4c --std p4_16 --target tofino --arch tna --bf-rt-schema simple_ipv4/tofino/bf-rt.json -o /home/motherfunder/open-p4studio/build/p4-build/my_program/simple_ipv4/tofino -g /home/motherfunder/IamWorking/tofinoCase/simpleforwarding/simple_ipv4.p4"
+}

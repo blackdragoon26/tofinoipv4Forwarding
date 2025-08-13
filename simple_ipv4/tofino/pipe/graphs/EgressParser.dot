@@ -1,0 +1,24 @@
+digraph EgressParser {
+subgraph clusterEgressParser {
+graph [
+fontsize="22pt", label=EgressParser, style=bold];
+0[label="start
+{ hdr.ethernet.etherType }", margin="", shape=rectangle, style=solid];
+1[label=parse_ipv4, margin="", shape=rectangle, style=solid];
+2[label=accept, margin="", shape=rectangle, style=solid];
+3[label=reject, margin="", shape=rectangle, style=solid];
+4[label="min_parse_depth_accept_initial
+{ (bit<1>)min_parse_depth_counter_0/min_parse_depth_counter.is_negative(), (bit<1>)min_parse_depth_counter_0/min_parse_depth_counter.is_zero() }", margin="", shape=rectangle, style=solid];
+5[label="min_parse_depth_accept_loop
+{ (bit<1>)min_parse_depth_counter_0/min_parse_depth_counter.is_negative(), (bit<1>)min_parse_depth_counter_0/min_parse_depth_counter.is_zero() }", margin="", shape=rectangle, style=solid];
+0 -> 1[label="16w0x800"];
+0 -> 4[label=default];
+1 -> 4[label=always];
+4 -> 5[label="(1w0, 1w0)"];
+4 -> 2[label="(default, default)"];
+4 -> 3[label=fallthrough];
+5 -> 5[label="(1w0, 1w0)"];
+5 -> 2[label="(default, default)"];
+5 -> 3[label=fallthrough];
+}
+}

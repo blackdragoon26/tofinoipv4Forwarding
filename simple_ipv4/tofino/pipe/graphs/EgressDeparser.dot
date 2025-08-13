@@ -1,0 +1,11 @@
+digraph EgressDeparser {
+subgraph cluster {
+graph [
+fontsize="22pt", label=EgressDeparser, style=bold];
+0[label=__START__, margin="", shape=rectangle, style=solid];
+1[label=__EXIT__, margin="", shape=rectangle, style=solid];
+2[label="pkt.emit<ethernet_t>(hdr....\n...\npkt.emit<min_parse_depth_...", margin="", shape=rectangle, style=solid];
+0 -> 2[label=""];
+2 -> 1[label=""];
+}
+}

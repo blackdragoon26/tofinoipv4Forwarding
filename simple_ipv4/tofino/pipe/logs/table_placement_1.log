@@ -1,0 +1,97 @@
+Table Placement INITIAL, not ignoring container conflicts
+Table placement starting on pipe with DEFAULT PLACEMENT approach
+ingress: [5]
+  cond-3(ingress::hdr.ipv4.$valid == 1; => $true, 1 => $false)
+    $true: [6]
+      ipv4_lpm_0{ T 32+2, 2 1K }
+egress: [7]
+  cond-4(egress::hdr.ipv4.$valid == 1; => $true, 1 => $false)
+    $true: [8]
+      next_hop_0{ E -1+1, 16 0K }
+
+stage 0, work: [ 1717654, 1722303 ], partly placed 0, placed 0
+    { id=0 ram=0 tcam=0 mram=0 eixb=0 tixb=0 malu=0 salu=0 local_tinds=0 }
+try_place_table(cond-3, stage=0)
+    Merging with match table ipv4_lpm_0 and tag $true
+    Initial # of stages is 0, initial # of entries is 1024
+  Try_alloc_all for Table use
+  Trying to allocate layout for ipv4_lpm_0 
+  Picking layout option for table : ipv4_lpm_0 with requested entries : 1024
+  picked layout for ipv4_lpm_0 FormatType(02) layout: 1024tV ixbar:4B/32b match:4B/32b adb:2 ov:11 imm:9
+  entries:1024 srams:1 local_tinds: 0 maprams:0 tcams:2 afi:1
+  Trying to allocate adb for ipv4_lpm_0 
+  Trying to allocate imem for ipv4_lpm_0 
+  Entries : 1024, needed_entries: 1024, need_more: 0
+    Selected stage: 0    Furthest stage: 0
+    try_place_table returning 1024 of ipv4_lpm_0 in stage 0
+  Table is  placed
+  Gateway is  placed
+    Pl vector: ipv4_lpm_0 
+try_place_table(cond-4, stage=0)
+    Merging with match table next_hop_0 and tag $true
+    Initial # of stages is 0, initial # of entries is 512
+  Try_alloc_all for Table use
+  Trying to allocate layout for next_hop_0 
+  Picking layout option for table : next_hop_0 with requested entries : 512
+  picked layout for next_hop_0 FormatType(02) layout: 512eV ixbar:2B/9b match:0B/-1b gh:2 adb:12/8 ov:33 imm:32
+  way:{ g:1 e:0 w:1 1 }
+  entries:1024 srams:2 local_tinds: 0 maprams:0 tcams:0 afi:1 I
+  Trying to allocate adb for next_hop_0 
+  Trying to allocate imem for next_hop_0 
+  Entries : 1024, needed_entries: 512, need_more: 0
+    Selected stage: 0    Furthest stage: 0
+    try_place_table returning 1024 of next_hop_0 in stage 0
+  Table is  placed
+  Gateway is  placed
+    Pl vector: next_hop_0 
+found 2 tables that could be placed: [ ipv4_lpm_0, next_hop_0 ]
+Initial best is first table seen: ipv4_lpm_0
+For trial t : next_hop_0 with best: ipv4_lpm_0
+    Updating best to next_hop_0 from ipv4_lpm_0 for reason: default choice
+Adding table:ipv4_lpm_0 in the initial stage option
+Adding table:next_hop_0 in the initial stage option
+placing 1024 entries of next_hop_0 ( Egress.next_hop )  (with gw cond-4, result tag $true) in stage 0(0) FormatType(02)
+stage 0, work: [ 1717654 ], partly placed 0, placed 1
+    { id=1 ram=2 tcam=0 mram=0 eixb=2 tixb=0 malu=0 salu=0 local_tinds=0 }
+try_place_table(cond-3, stage=0)
+    Merging with match table ipv4_lpm_0 and tag $true
+    Initial # of stages is 0, initial # of entries is 1024
+  Try_alloc_all for Table use
+  Trying to allocate layout for ipv4_lpm_0 
+  Picking layout option for table : ipv4_lpm_0 with requested entries : 1024
+  picked layout for ipv4_lpm_0 FormatType(02) layout: 1024tV ixbar:4B/32b match:4B/32b adb:2 ov:11 imm:9
+  entries:1024 srams:1 local_tinds: 0 maprams:0 tcams:2 afi:1
+  Trying to allocate adb for ipv4_lpm_0 
+  Trying to allocate imem for ipv4_lpm_0 
+  Entries : 1024, needed_entries: 1024, need_more: 0
+    Selected stage: 0    Furthest stage: 1
+    try_place_table returning 1024 of ipv4_lpm_0 in stage 0
+  Table is  placed
+  Gateway is  placed
+    Pl vector: ipv4_lpm_0 
+found 1 tables that could be placed: [ ipv4_lpm_0 ]
+Initial best is first table seen: ipv4_lpm_0
+placing 1024 entries of ipv4_lpm_0 ( Ingress.ipv4_lpm )  (with gw cond-3, result tag $true) in stage 0(1) FormatType(02)
+Adding complete placement for resource mode:0
+Found a complete solution that fit the number of stages required
+Evaluating complete solution with resource:0
+Placement error(s):0 stages required:1
+Updating best final placement with this one
+Table placement placed 2 tables in 1 stages
+  Table ipv4_lpm_0 logical id 0x1 entries=1024 stage=0
+  Gateway cond-3 is also logical id 0x1
+  Table next_hop_0 logical id 0x0 entries=1024 stage=0
+  Gateway cond-4 is also logical id 0x0
+Finished table placement decisions pipe
+folding gateway cond-3 onto ipv4_lpm_0
+  Adding Ternary Indirect table to ipv4_lpm_0
+folding gateway cond-4 onto next_hop_0
+  Adding Action Data Table to next_hop_0
+table placement completed pipe
+ingress: [5]
+  1: ipv4_lpm_0(ingress::hdr.ipv4.$valid == 1;, 1 => $false){ GT 32+11, 2 1K }
+    $false: [9]
+egress: [7]
+  0: next_hop_0(egress::hdr.ipv4.$valid == 1;, 1 => $false){ GE -1+33, 12 [1x1 1K] }
+    $false: [10]
+

@@ -1,0 +1,225 @@
+FindDependencyGraph : After Instruction Selection :  NA 
+ingress: [5]
+  cond-3(ingress::hdr.ipv4.$valid == 1; => $true, 1 => $false)
+    $true: [6]
+      ipv4_lpm_0
+egress: [7]
+  cond-4(egress::hdr.ipv4.$valid == 1; => $true, 1 => $false)
+    $true: [8]
+      next_hop_0
+
+DepStagesThruDomFrontier postorder : ipv4_lpm_0
+DepStagesThruDomFrontier postorder : cond-3
+DepStagesThruDomFrontier postorder : next_hop_0
+DepStagesThruDomFrontier postorder : cond-4
+    Maximum stage number according to dependences: 
+      INGRESS: 0
+      EGRESS: 0
+GRAPH
+    cond-3 -- CONTROL_COND_TRUE --> ipv4_lpm_0
+    cond-4 -- CONTROL_COND_TRUE --> next_hop_0
+MIN STAGE INFO
+    Each table also indicates its dependency chain length
+    First number refers to a dependency chain from which each tables are not split
+    Second number refers to a dependency chain from which each tables are split as on  last allocation pass
+ Stage #0
+     cond-3 (cond-3) 0 0
+     ipv4_lpm_0 (Ingress.ipv4_lpm) 0 0
+	- Edge CONTROL_COND_TRUE cond-3 ( cond-3 )
+     cond-4 (cond-4) 0 0
+     next_hop_0 (Egress.next_hop) 0 0
+	- Edge CONTROL_COND_TRUE cond-4 ( cond-4 )
+
+FindDependencyGraph : Just Before PHV allocation :  NA 
+ingress: [5]
+  cond-3(ingress::hdr.ipv4.$valid == 1; => $true, 1 => $false)
+    $true: [6]
+      ipv4_lpm_0
+egress: [7]
+  cond-4(egress::hdr.ipv4.$valid == 1; => $true, 1 => $false)
+    $true: [8]
+      next_hop_0
+
+DepStagesThruDomFrontier postorder : ipv4_lpm_0
+DepStagesThruDomFrontier postorder : cond-3
+DepStagesThruDomFrontier postorder : next_hop_0
+DepStagesThruDomFrontier postorder : cond-4
+    Maximum stage number according to dependences: 
+      INGRESS: 0
+      EGRESS: 0
+GRAPH
+    cond-3 -- CONTROL_COND_TRUE --> ipv4_lpm_0
+    cond-4 -- CONTROL_COND_TRUE --> next_hop_0
+MIN STAGE INFO
+    Each table also indicates its dependency chain length
+    First number refers to a dependency chain from which each tables are not split
+    Second number refers to a dependency chain from which each tables are split as on  last allocation pass
+ Stage #0
+     cond-3 (cond-3) 0 0
+     ipv4_lpm_0 (Ingress.ipv4_lpm) 0 0
+	- Edge CONTROL_COND_TRUE cond-3 ( cond-3 )
+     cond-4 (cond-4) 0 0
+     next_hop_0 (Egress.next_hop) 0 0
+	- Edge CONTROL_COND_TRUE cond-4 ( cond-4 )
+
+FindDependencyGraph : Before Uninitialized Read Check :  NA 
+ingress: [5]
+  cond-3(ingress::hdr.ipv4.$valid == 1; => $true, 1 => $false)
+    $true: [6]
+      ipv4_lpm_0
+egress: [7]
+  cond-4(egress::hdr.ipv4.$valid == 1; => $true, 1 => $false)
+    $true: [8]
+      next_hop_0
+
+DepStagesThruDomFrontier postorder : ipv4_lpm_0
+DepStagesThruDomFrontier postorder : cond-3
+DepStagesThruDomFrontier postorder : next_hop_0
+DepStagesThruDomFrontier postorder : cond-4
+    Maximum stage number according to dependences: 
+      INGRESS: 0
+      EGRESS: 0
+GRAPH
+    cond-3 -- CONTROL_COND_TRUE --> ipv4_lpm_0
+    cond-4 -- CONTROL_COND_TRUE --> next_hop_0
+MIN STAGE INFO
+    Each table also indicates its dependency chain length
+    First number refers to a dependency chain from which each tables are not split
+    Second number refers to a dependency chain from which each tables are split as on  last allocation pass
+ Stage #0
+     cond-3 (cond-3) 0 0
+     ipv4_lpm_0 (Ingress.ipv4_lpm) 0 0
+	- Edge CONTROL_COND_TRUE cond-3 ( cond-3 )
+     cond-4 (cond-4) 0 0
+     next_hop_0 (Egress.next_hop) 0 0
+	- Edge CONTROL_COND_TRUE cond-4 ( cond-4 )
+
+ingress: [5]
+  cond-3(ingress::hdr.ipv4.$valid == 1; => $true, 1 => $false)
+    $true: [6]
+      ipv4_lpm_0{ T 32+2, 2 1K }
+egress: [7]
+  cond-4(egress::hdr.ipv4.$valid == 1; => $true, 1 => $false)
+    $true: [8]
+      next_hop_0{ E -1+1, 16 0K }
+
+DepStagesThruDomFrontier postorder : ipv4_lpm_0
+DepStagesThruDomFrontier postorder : cond-3
+DepStagesThruDomFrontier postorder : next_hop_0
+DepStagesThruDomFrontier postorder : cond-4
+    Maximum stage number according to dependences: 
+      INGRESS: 0
+      EGRESS: 0
+GRAPH
+    cond-3 -- CONTROL_COND_TRUE --> ipv4_lpm_0
+    cond-4 -- CONTROL_COND_TRUE --> next_hop_0
+MIN STAGE INFO
+    Each table also indicates its dependency chain length
+    First number refers to a dependency chain from which each tables are not split
+    Second number refers to a dependency chain from which each tables are split as on  last allocation pass
+ Stage #0
+     cond-3 (cond-3) 0 0
+     ipv4_lpm_0 (Ingress.ipv4_lpm) 0 0
+	- Edge CONTROL_COND_TRUE cond-3 ( cond-3 )
+     cond-4 (cond-4) 0 0
+     next_hop_0 (Egress.next_hop) 0 0
+	- Edge CONTROL_COND_TRUE cond-4 ( cond-4 )
+
+FindDependencyGraph : Before Table Placement : INITIAL
+ingress: [5]
+  cond-3(ingress::hdr.ipv4.$valid == 1; => $true, 1 => $false)
+    $true: [6]
+      ipv4_lpm_0{ T 32+2, 2 1K }
+egress: [7]
+  cond-4(egress::hdr.ipv4.$valid == 1; => $true, 1 => $false)
+    $true: [8]
+      next_hop_0{ E -1+1, 16 0K }
+
+DepStagesThruDomFrontier postorder : ipv4_lpm_0
+DepStagesThruDomFrontier postorder : cond-3
+DepStagesThruDomFrontier postorder : next_hop_0
+DepStagesThruDomFrontier postorder : cond-4
+    Maximum stage number according to dependences: 
+      INGRESS: 0
+      EGRESS: 0
+GRAPH
+    cond-3 -- CONTROL_COND_TRUE --> ipv4_lpm_0
+    cond-4 -- CONTROL_COND_TRUE --> next_hop_0
+MIN STAGE INFO
+    Each table also indicates its dependency chain length
+    First number refers to a dependency chain from which each tables are not split
+    Second number refers to a dependency chain from which each tables are split as on  last allocation pass
+ Stage #0
+     cond-3 (cond-3) 0 0
+     ipv4_lpm_0 (Ingress.ipv4_lpm) 0 0
+	- Edge CONTROL_COND_TRUE cond-3 ( cond-3 )
+     cond-4 (cond-4) 0 0
+     next_hop_0 (Egress.next_hop) 0 0
+	- Edge CONTROL_COND_TRUE cond-4 ( cond-4 )
+
+FindDependencyGraph : After Table Placement : INITIAL
+ingress: [5]
+  1: ipv4_lpm_0(ingress::hdr.ipv4.$valid == 1;, 1 => $false){ GT 32+11, 2 1K }
+    $false: [9]
+egress: [7]
+  0: next_hop_0(egress::hdr.ipv4.$valid == 1;, 1 => $false){ GE -1+33, 12 [1x1 1K] }
+    $false: [10]
+
+DepStagesThruDomFrontier postorder : ipv4_lpm_0
+DepStagesThruDomFrontier postorder : next_hop_0
+    Maximum stage number according to dependences: 
+      INGRESS: 0
+      EGRESS: 0
+GRAPH
+MIN STAGE INFO
+    Each table also indicates its dependency chain length
+    First number refers to a dependency chain from which each tables are not split
+    Second number refers to a dependency chain from which each tables are split as on  last allocation pass
+ Stage #0
+     ipv4_lpm_0 (Ingress.ipv4_lpm) 0 0
+     next_hop_0 (Egress.next_hop) 0 0
+
+FindDependencyGraph : After Table Placement :  NA 
+ingress: [5]
+  1: ipv4_lpm_0(ingress::hdr.ipv4.$valid == 1;, 1 => $false){ GT 32+11, 2 1K }
+    $false: [9]
+egress: [7]
+  0: next_hop_0(egress::hdr.ipv4.$valid == 1;, 1 => $false){ GE -1+33, 12 [1x1 1K] }
+    $false: [10]
+
+DepStagesThruDomFrontier postorder : ipv4_lpm_0
+DepStagesThruDomFrontier postorder : next_hop_0
+    Maximum stage number according to dependences: 
+      INGRESS: 0
+      EGRESS: 0
+GRAPH
+MIN STAGE INFO
+    Each table also indicates its dependency chain length
+    First number refers to a dependency chain from which each tables are not split
+    Second number refers to a dependency chain from which each tables are split as on  last allocation pass
+ Stage #0
+     ipv4_lpm_0 (Ingress.ipv4_lpm) 0 0
+     next_hop_0 (Egress.next_hop) 0 0
+
+FindDependencyGraph : Power Calculation :  NA 
+ingress: [5]
+  1: ipv4_lpm_0(ingress::hdr.ipv4.$valid == 1;, 1 => $false){ GT 32+11, 2 1K }
+    $false: [9]
+egress: [7]
+  0: next_hop_0(egress::hdr.ipv4.$valid == 1;, 1 => $false){ GE -1+33, 12 [1x1 1K] }
+    $false: [10]
+
+DepStagesThruDomFrontier postorder : ipv4_lpm_0
+DepStagesThruDomFrontier postorder : next_hop_0
+    Maximum stage number according to dependences: 
+      INGRESS: 0
+      EGRESS: 0
+GRAPH
+MIN STAGE INFO
+    Each table also indicates its dependency chain length
+    First number refers to a dependency chain from which each tables are not split
+    Second number refers to a dependency chain from which each tables are split as on  last allocation pass
+ Stage #0
+     ipv4_lpm_0 (Ingress.ipv4_lpm) 0 0
+     next_hop_0 (Egress.next_hop) 0 0
+

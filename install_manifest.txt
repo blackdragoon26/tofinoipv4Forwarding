@@ -1,0 +1,5 @@
+/home/motherfunder/open-p4studio/install/bin/sdepythonpath.py
+/home/motherfunder/open-p4studio/install/share/p4/targets/tofino/simple_ipv4.conf
+/home/motherfunder/open-p4studio/install/share/tofinopd/simple_ipv4/pipe/tofino.bin
+/home/motherfunder/open-p4studio/install/share/tofinopd/simple_ipv4/pipe/context.json
+/home/motherfunder/open-p4studio/install/share/tofinopd/simple_ipv4/bf-rt.json

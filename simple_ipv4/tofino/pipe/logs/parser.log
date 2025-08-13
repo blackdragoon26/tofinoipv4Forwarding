@@ -1,0 +1,14 @@
+egress::min_parse_depth_accept_loop.$it2 is split into 2 states:
+  egress::min_parse_depth_accept_loop.$it2
+  egress::min_parse_depth_accept_loop.$it2.$split_0
+egress::min_parse_depth_accept_loop.$it1 is split into 2 states:
+  egress::min_parse_depth_accept_loop.$it1
+  egress::min_parse_depth_accept_loop.$it1.$split_0
+egress::min_parse_depth_accept_loop is split into 2 states:
+  egress::min_parse_depth_accept_loop
+  egress::min_parse_depth_accept_loop.$split_0
+$entry_point.start is split into 2 states:
+  $entry_point.start
+  $entry_point.start.$split_0
+allocated { $half } to {  [ $entry_point.start.$split_0 : inbuf bit[80..95] hdr.ethernet/ethernet.etherType; ] }
+allocated { $half } to {  [ $entry_point.start : inbuf bit[224..239] hdr.ethernet/ethernet.etherType; ] }

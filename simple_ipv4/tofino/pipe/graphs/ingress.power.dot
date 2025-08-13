@@ -1,0 +1,5 @@
+digraph ingress {
+0 [label="$root" shape=box color="black"];
+1 [label="ipv4_lpm_0" shape=box color="black"];
+0-> 1 [label="$start" color="black"];
+}

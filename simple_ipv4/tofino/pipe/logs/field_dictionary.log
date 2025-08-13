@@ -1,0 +1,500 @@
+{
+  "ingress": [
+    {
+      "Field Dictionary Number": 0,
+      "POV PHV": 67,
+      "POV Field bit": 0,
+      "POV Field Name": "hdr.ethernet.$valid",
+      "Content": [
+        { "Byte": 0, "PHV": 324, "Field": "hdr.ethernet.dstAddr.32-47, " },
+        { "Byte": 1, "PHV": 324, "Field": "hdr.ethernet.dstAddr.32-47, " },
+        { "Byte": 2, "PHV": 259, "Field": "hdr.ethernet.dstAddr.0-31, " },
+        { "Byte": 3, "PHV": 259, "Field": "hdr.ethernet.dstAddr.0-31, " }
+      ]
+    },
+    {
+      "Field Dictionary Number": 1,
+      "POV PHV": 67,
+      "POV Field bit": 0,
+      "POV Field Name": "hdr.ethernet.$valid",
+      "Content": [
+        { "Byte": 0, "PHV": 259, "Field": "hdr.ethernet.dstAddr.0-31, " },
+        { "Byte": 1, "PHV": 259, "Field": "hdr.ethernet.dstAddr.0-31, " },
+        { "Byte": 2, "PHV": 323, "Field": "hdr.ethernet.srcAddr.32-47, " },
+        { "Byte": 3, "PHV": 323, "Field": "hdr.ethernet.srcAddr.32-47, " }
+      ]
+    },
+    {
+      "Field Dictionary Number": 2,
+      "POV PHV": 67,
+      "POV Field bit": 0,
+      "POV Field Name": "hdr.ethernet.$valid",
+      "Content": [
+        { "Byte": 0, "PHV": 258, "Field": "hdr.ethernet.srcAddr.0-31, " },
+        { "Byte": 1, "PHV": 258, "Field": "hdr.ethernet.srcAddr.0-31, " },
+        { "Byte": 2, "PHV": 258, "Field": "hdr.ethernet.srcAddr.0-31, " },
+        { "Byte": 3, "PHV": 258, "Field": "hdr.ethernet.srcAddr.0-31, " }
+      ]
+    },
+    {
+      "Field Dictionary Number": 3,
+      "POV PHV": 67,
+      "POV Field bit": 0,
+      "POV Field Name": "hdr.ethernet.$valid",
+      "Content": [
+        { "Byte": 0, "PHV": 322, "Field": "hdr.ethernet.etherType, " },
+        { "Byte": 1, "PHV": 322, "Field": "hdr.ethernet.etherType, " }
+      ]
+    },
+    {
+      "Field Dictionary Number": 4,
+      "POV PHV": 67,
+      "POV Field bit": 1,
+      "POV Field Name": "hdr.ipv4.$valid",
+      "Content": [
+        {
+          "Byte": 0,
+          "PHV": 256,
+          "Field": "hdr.ipv4.diffserv, hdr.ipv4.ihl, hdr.ipv4.totalLen, hdr.ipv4.version, "
+        },
+        {
+          "Byte": 1,
+          "PHV": 256,
+          "Field": "hdr.ipv4.diffserv, hdr.ipv4.ihl, hdr.ipv4.totalLen, hdr.ipv4.version, "
+        },
+        {
+          "Byte": 2,
+          "PHV": 256,
+          "Field": "hdr.ipv4.diffserv, hdr.ipv4.ihl, hdr.ipv4.totalLen, hdr.ipv4.version, "
+        },
+        {
+          "Byte": 3,
+          "PHV": 256,
+          "Field": "hdr.ipv4.diffserv, hdr.ipv4.ihl, hdr.ipv4.totalLen, hdr.ipv4.version, "
+        }
+      ]
+    },
+    {
+      "Field Dictionary Number": 5,
+      "POV PHV": 67,
+      "POV Field bit": 1,
+      "POV Field Name": "hdr.ipv4.$valid",
+      "Content": [
+        {
+          "Byte": 0,
+          "PHV": 257,
+          "Field": "hdr.ipv4.flags, hdr.ipv4.fragOffset, hdr.ipv4.identification, "
+        },
+        {
+          "Byte": 1,
+          "PHV": 257,
+          "Field": "hdr.ipv4.flags, hdr.ipv4.fragOffset, hdr.ipv4.identification, "
+        },
+        {
+          "Byte": 2,
+          "PHV": 257,
+          "Field": "hdr.ipv4.flags, hdr.ipv4.fragOffset, hdr.ipv4.identification, "
+        },
+        {
+          "Byte": 3,
+          "PHV": 257,
+          "Field": "hdr.ipv4.flags, hdr.ipv4.fragOffset, hdr.ipv4.identification, "
+        }
+      ]
+    },
+    {
+      "Field Dictionary Number": 6,
+      "POV PHV": 67,
+      "POV Field bit": 1,
+      "POV Field Name": "hdr.ipv4.$valid",
+      "Content": [
+        { "Byte": 0, "PHV": 64, "Field": "hdr.ipv4.ttl, " },
+        { "Byte": 1, "PHV": 288, "Field": "hdr.ipv4.protocol, " },
+        { "Byte": 2, "PHV": 325, "Field": "hdr.ipv4.hdrChecksum, " },
+        { "Byte": 3, "PHV": 325, "Field": "hdr.ipv4.hdrChecksum, " }
+      ]
+    },
+    {
+      "Field Dictionary Number": 7,
+      "POV PHV": 67,
+      "POV Field bit": 1,
+      "POV Field Name": "hdr.ipv4.$valid",
+      "Content": [
+        { "Byte": 0, "PHV": 321, "Field": "hdr.ipv4.srcAddr.16-31, " },
+        { "Byte": 1, "PHV": 321, "Field": "hdr.ipv4.srcAddr.16-31, " },
+        { "Byte": 2, "PHV": 320, "Field": "hdr.ipv4.srcAddr.0-15, " },
+        { "Byte": 3, "PHV": 320, "Field": "hdr.ipv4.srcAddr.0-15, " }
+      ]
+    }
+  ],
+  "egress": [
+    {
+      "Field Dictionary Number": 0,
+      "POV PHV": 81,
+      "POV Field bit": 0,
+      "POV Field Name": "hdr.ethernet.$valid",
+      "Content": [
+        { "Byte": 0, "PHV": 146, "Field": "hdr.ethernet.dstAddr.32-47, " },
+        { "Byte": 1, "PHV": 146, "Field": "hdr.ethernet.dstAddr.32-47, " },
+        { "Byte": 2, "PHV": 17, "Field": "hdr.ethernet.dstAddr.0-31, " },
+        { "Byte": 3, "PHV": 17, "Field": "hdr.ethernet.dstAddr.0-31, " }
+      ]
+    },
+    {
+      "Field Dictionary Number": 1,
+      "POV PHV": 81,
+      "POV Field bit": 0,
+      "POV Field Name": "hdr.ethernet.$valid",
+      "Content": [
+        { "Byte": 0, "PHV": 17, "Field": "hdr.ethernet.dstAddr.0-31, " },
+        { "Byte": 1, "PHV": 17, "Field": "hdr.ethernet.dstAddr.0-31, " },
+        { "Byte": 2, "PHV": 145, "Field": "hdr.ethernet.srcAddr.32-47, " },
+        { "Byte": 3, "PHV": 145, "Field": "hdr.ethernet.srcAddr.32-47, " }
+      ]
+    },
+    {
+      "Field Dictionary Number": 2,
+      "POV PHV": 81,
+      "POV Field bit": 0,
+      "POV Field Name": "hdr.ethernet.$valid",
+      "Content": [
+        { "Byte": 0, "PHV": 16, "Field": "hdr.ethernet.srcAddr.0-31, " },
+        { "Byte": 1, "PHV": 16, "Field": "hdr.ethernet.srcAddr.0-31, " },
+        { "Byte": 2, "PHV": 16, "Field": "hdr.ethernet.srcAddr.0-31, " },
+        { "Byte": 3, "PHV": 16, "Field": "hdr.ethernet.srcAddr.0-31, " }
+      ]
+    },
+    {
+      "Field Dictionary Number": 3,
+      "POV PHV": 81,
+      "POV Field bit": 0,
+      "POV Field Name": "hdr.ethernet.$valid",
+      "Content": [
+        { "Byte": 0, "PHV": 332, "Field": "hdr.ethernet.etherType, " },
+        { "Byte": 1, "PHV": 332, "Field": "hdr.ethernet.etherType, " }
+      ]
+    },
+    {
+      "Field Dictionary Number": 4,
+      "POV PHV": 81,
+      "POV Field bit": 1,
+      "POV Field Name": "hdr.ipv4.$valid",
+      "Content": [
+        {
+          "Byte": 0,
+          "PHV": 260,
+          "Field": "hdr.ipv4.diffserv, hdr.ipv4.ihl, hdr.ipv4.totalLen, hdr.ipv4.version, "
+        },
+        {
+          "Byte": 1,
+          "PHV": 260,
+          "Field": "hdr.ipv4.diffserv, hdr.ipv4.ihl, hdr.ipv4.totalLen, hdr.ipv4.version, "
+        },
+        {
+          "Byte": 2,
+          "PHV": 260,
+          "Field": "hdr.ipv4.diffserv, hdr.ipv4.ihl, hdr.ipv4.totalLen, hdr.ipv4.version, "
+        },
+        {
+          "Byte": 3,
+          "PHV": 260,
+          "Field": "hdr.ipv4.diffserv, hdr.ipv4.ihl, hdr.ipv4.totalLen, hdr.ipv4.version, "
+        }
+      ]
+    },
+    {
+      "Field Dictionary Number": 5,
+      "POV PHV": 81,
+      "POV Field bit": 1,
+      "POV Field Name": "hdr.ipv4.$valid",
+      "Content": [
+        {
+          "Byte": 0,
+          "PHV": 262,
+          "Field": "hdr.ipv4.flags, hdr.ipv4.fragOffset, hdr.ipv4.identification, "
+        },
+        {
+          "Byte": 1,
+          "PHV": 262,
+          "Field": "hdr.ipv4.flags, hdr.ipv4.fragOffset, hdr.ipv4.identification, "
+        },
+        {
+          "Byte": 2,
+          "PHV": 262,
+          "Field": "hdr.ipv4.flags, hdr.ipv4.fragOffset, hdr.ipv4.identification, "
+        },
+        {
+          "Byte": 3,
+          "PHV": 262,
+          "Field": "hdr.ipv4.flags, hdr.ipv4.fragOffset, hdr.ipv4.identification, "
+        }
+      ]
+    },
+    {
+      "Field Dictionary Number": 6,
+      "POV PHV": 81,
+      "POV Field bit": 1,
+      "POV Field Name": "hdr.ipv4.$valid",
+      "Content": [
+        {
+          "Byte": 0,
+          "PHV": 261,
+          "Field": "hdr.ipv4.hdrChecksum, hdr.ipv4.protocol, hdr.ipv4.ttl, "
+        },
+        {
+          "Byte": 1,
+          "PHV": 261,
+          "Field": "hdr.ipv4.hdrChecksum, hdr.ipv4.protocol, hdr.ipv4.ttl, "
+        },
+        {
+          "Byte": 2,
+          "PHV": 261,
+          "Field": "hdr.ipv4.hdrChecksum, hdr.ipv4.protocol, hdr.ipv4.ttl, "
+        },
+        {
+          "Byte": 3,
+          "PHV": 261,
+          "Field": "hdr.ipv4.hdrChecksum, hdr.ipv4.protocol, hdr.ipv4.ttl, "
+        }
+      ]
+    },
+    {
+      "Field Dictionary Number": 7,
+      "POV PHV": 81,
+      "POV Field bit": 1,
+      "POV Field Name": "hdr.ipv4.$valid",
+      "Content": [
+        { "Byte": 0, "PHV": 327, "Field": "hdr.ipv4.srcAddr.16-31, " },
+        { "Byte": 1, "PHV": 327, "Field": "hdr.ipv4.srcAddr.16-31, " },
+        { "Byte": 2, "PHV": 326, "Field": "hdr.ipv4.srcAddr.0-15, " },
+        { "Byte": 3, "PHV": 326, "Field": "hdr.ipv4.srcAddr.0-15, " }
+      ]
+    },
+    {
+      "Field Dictionary Number": 8,
+      "POV PHV": 81,
+      "POV Field bit": 1,
+      "POV Field Name": "hdr.ipv4.$valid",
+      "Content": [
+        { "Byte": 0, "PHV": 263, "Field": "hdr.ipv4.dstAddr, " },
+        { "Byte": 1, "PHV": 263, "Field": "hdr.ipv4.dstAddr, " },
+        { "Byte": 2, "PHV": 263, "Field": "hdr.ipv4.dstAddr, " },
+        { "Byte": 3, "PHV": 263, "Field": "hdr.ipv4.dstAddr, " }
+      ]
+    },
+    {
+      "Field Dictionary Number": 9,
+      "POV PHV": 80,
+      "POV Field bit": 10,
+      "POV Field Name": " ",
+      "Content": [
+        {
+          "Byte": 0,
+          "PHV": 292,
+          "Field": "hdr.min_parse_depth_padding_0$0.packet_payload.80-87, "
+        },
+        {
+          "Byte": 1,
+          "PHV": 333,
+          "Field": "hdr.min_parse_depth_padding_0$0.packet_payload.64-79, "
+        },
+        {
+          "Byte": 2,
+          "PHV": 333,
+          "Field": "hdr.min_parse_depth_padding_0$0.packet_payload.64-79, "
+        },
+        {
+          "Byte": 3,
+          "PHV": 331,
+          "Field": "hdr.min_parse_depth_padding_0$0.packet_payload.48-63, "
+        }
+      ]
+    },
+    {
+      "Field Dictionary Number": 10,
+      "POV PHV": 80,
+      "POV Field bit": 10,
+      "POV Field Name": " ",
+      "Content": [
+        {
+          "Byte": 0,
+          "PHV": 331,
+          "Field": "hdr.min_parse_depth_padding_0$0.packet_payload.48-63, "
+        },
+        {
+          "Byte": 1,
+          "PHV": 330,
+          "Field": "hdr.min_parse_depth_padding_0$0.packet_payload.32-47, "
+        },
+        {
+          "Byte": 2,
+          "PHV": 330,
+          "Field": "hdr.min_parse_depth_padding_0$0.packet_payload.32-47, "
+        },
+        {
+          "Byte": 3,
+          "PHV": 329,
+          "Field": "hdr.min_parse_depth_padding_0$0.packet_payload.16-31, "
+        }
+      ]
+    },
+    {
+      "Field Dictionary Number": 11,
+      "POV PHV": 80,
+      "POV Field bit": 10,
+      "POV Field Name": " ",
+      "Content": [
+        {
+          "Byte": 0,
+          "PHV": 329,
+          "Field": "hdr.min_parse_depth_padding_0$0.packet_payload.16-31, "
+        },
+        {
+          "Byte": 1,
+          "PHV": 328,
+          "Field": "hdr.min_parse_depth_padding_0$0.packet_payload.0-15, "
+        },
+        {
+          "Byte": 2,
+          "PHV": 328,
+          "Field": "hdr.min_parse_depth_padding_0$0.packet_payload.0-15, "
+        }
+      ]
+    },
+    {
+      "Field Dictionary Number": 12,
+      "POV PHV": 80,
+      "POV Field bit": 9,
+      "POV Field Name": " ",
+      "Content": [
+        {
+          "Byte": 0,
+          "PHV": 293,
+          "Field": "hdr.min_parse_depth_padding_0$1.packet_payload.80-87, "
+        },
+        {
+          "Byte": 1,
+          "PHV": 334,
+          "Field": "hdr.min_parse_depth_padding_0$1.packet_payload.64-79, "
+        },
+        {
+          "Byte": 2,
+          "PHV": 334,
+          "Field": "hdr.min_parse_depth_padding_0$1.packet_payload.64-79, "
+        },
+        {
+          "Byte": 3,
+          "PHV": 265,
+          "Field": "hdr.min_parse_depth_padding_0$1.packet_payload.32-63, "
+        }
+      ]
+    },
+    {
+      "Field Dictionary Number": 13,
+      "POV PHV": 80,
+      "POV Field bit": 9,
+      "POV Field Name": " ",
+      "Content": [
+        {
+          "Byte": 0,
+          "PHV": 265,
+          "Field": "hdr.min_parse_depth_padding_0$1.packet_payload.32-63, "
+        },
+        {
+          "Byte": 1,
+          "PHV": 265,
+          "Field": "hdr.min_parse_depth_padding_0$1.packet_payload.32-63, "
+        },
+        {
+          "Byte": 2,
+          "PHV": 265,
+          "Field": "hdr.min_parse_depth_padding_0$1.packet_payload.32-63, "
+        },
+        {
+          "Byte": 3,
+          "PHV": 264,
+          "Field": "hdr.min_parse_depth_padding_0$1.packet_payload.0-31, "
+        }
+      ]
+    },
+    {
+      "Field Dictionary Number": 14,
+      "POV PHV": 80,
+      "POV Field bit": 9,
+      "POV Field Name": " ",
+      "Content": [
+        {
+          "Byte": 0,
+          "PHV": 264,
+          "Field": "hdr.min_parse_depth_padding_0$1.packet_payload.0-31, "
+        },
+        {
+          "Byte": 1,
+          "PHV": 264,
+          "Field": "hdr.min_parse_depth_padding_0$1.packet_payload.0-31, "
+        },
+        {
+          "Byte": 2,
+          "PHV": 264,
+          "Field": "hdr.min_parse_depth_padding_0$1.packet_payload.0-31, "
+        }
+      ]
+    },
+    {
+      "Field Dictionary Number": 15,
+      "POV PHV": 80,
+      "POV Field bit": 8,
+      "POV Field Name": "hdr.min_parse_depth_padding_0$2.$valid",
+      "Content": [
+        {
+          "Byte": 0,
+          "PHV": 294,
+          "Field": "hdr.min_parse_depth_padding_0$2.packet_payload.80-87, "
+        },
+        {
+          "Byte": 1,
+          "PHV": 335,
+          "Field": "hdr.min_parse_depth_padding_0$2.packet_payload.64-79, "
+        },
+        {
+          "Byte": 2,
+          "PHV": 335,
+          "Field": "hdr.min_parse_depth_padding_0$2.packet_payload.64-79, "
+        },
+        {
+          "Byte": 3,
+          "PHV": 267,
+          "Field": "hdr.min_parse_depth_padding_0$2.packet_payload.32-63, "
+        }
+      ]
+    },
+    {
+      "Field Dictionary Number": 16,
+      "POV PHV": 80,
+      "POV Field bit": 8,
+      "POV Field Name": "hdr.min_parse_depth_padding_0$2.$valid",
+      "Content": [
+        {
+          "Byte": 0,
+          "PHV": 267,
+          "Field": "hdr.min_parse_depth_padding_0$2.packet_payload.32-63, "
+        },
+        {
+          "Byte": 1,
+          "PHV": 267,
+          "Field": "hdr.min_parse_depth_padding_0$2.packet_payload.32-63, "
+        },
+        {
+          "Byte": 2,
+          "PHV": 267,
+          "Field": "hdr.min_parse_depth_padding_0$2.packet_payload.32-63, "
+        },
+        {
+          "Byte": 3,
+          "PHV": 266,
+          "Field": "hdr.min_parse_depth_padding_0$2.packet_payload.0-31, "
+        }
+      ]
+    }
+  ]
+}
