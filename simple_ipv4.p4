@@ -140,7 +140,7 @@ control Egress(inout headers hdr,
             rewrite_mac;
             NoAction;
         }
-        size = 1024;
+        size = 512;
         default_action = NoAction();
     }
     
