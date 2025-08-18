@@ -21,12 +21,12 @@ cd /home/motherfunder/IamWorking/tofinoCase/simpleforwarding/tofinoipv4Forwardin
 
 (in my case simple_ipv4, since my p4 file name is simple_ipv4.p4)
 ```
-rm –rf   $SDE/build/p4-build/simple_ipv4
+rm –rf $SDE/build/p4-build/p4-build/simple_ipv4
 ```
 
 # compiling code
 ```
-mkdir –p $SDE/build/p4-build/my_program
+mkdir $SDE/build/p4-build/my_program
 cd       $SDE/build/p4-build/my_program
 cmake $SDE/p4studio                                         \
      -DCMAKE_MODULE_PATH="$SDE/cmake"                       \
@@ -37,5 +37,8 @@ cmake $SDE/p4studio                                         \
      -DP4_LANG=p4_16                                        \
      -DTOFINO={ON} –DTOFINO2={OFF}
 ```
-
+# imp cmd 
+```
+make [VERBOSE=1] -j install
+```
 all the built directory will be uploaded in main-2 branch
